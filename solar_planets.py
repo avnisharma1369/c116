@@ -1,0 +1,79 @@
+import cv2
+img=cv2.imread("solar-system.jpg")
+sun=img[120:360,400:500]
+img[0:240,500:600]=sun
+text_to_show1="SUN"
+text_to_show2="MERCURY"
+text_to_show3="VENUS"
+text_to_show4="EARTH"
+text_to_show5="Mars"
+text_to_show6="Jupitar"
+text_to_show7="Saturn"
+text_to_show8="Uranus"
+text_to_show9="Neptune"
+cv2.putText(img,
+            text_to_show1,
+            (20,300),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=1,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show2,
+            (120,250),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show3,
+            (180,200),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show4,
+            (280,180),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show5,
+            (420,180),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show6,
+            (520,180),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show7,
+            (765,180),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show6,
+            (960,135),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.putText(img,
+            text_to_show7,
+            (1080,180),
+            fontFace=cv2.FONT_HERSHEY_COMPLEX,
+            fontScale=0.4,
+            color=(255,255,255),
+            )
+cv2.imshow("output",img)
+cv2.waitKey(0)
+cv2.imwrite("solar-system.jpg",img)
